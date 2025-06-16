@@ -1,0 +1,41 @@
+{
+  "name": "epub-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for reading EPUB files and providing content to LLMs",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [
+    "mcp",
+    "epub",
+    "ebook",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "epub-parser": "^0.2.5",
+    "epub2": "^3.0.2",
+    "jsdom": "^25.0.1",
+    "yauzl": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.0.0",
+    "@vitest/ui": "^3.2.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
