@@ -62,7 +62,7 @@ describe('MCP Server Integration', () => {
       const response = await handler(request);
 
       expect(response.tools).toHaveLength(6);
-      const toolNames = response.tools.map(t => t.name);
+      const toolNames = response.tools.map((t: any) => t.name);
       expect(toolNames).toContain('load_epub');
       expect(toolNames).toContain('read_epub_metadata');
       expect(toolNames).toContain('read_epub_toc');
